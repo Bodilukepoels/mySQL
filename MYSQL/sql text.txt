@@ -1,0 +1,33 @@
+INSERT INTO student (
+studentnr,
+roepnaam,
+voorletters,
+tussenvoegsels,
+achternaam,
+adres,
+postcode,
+woonplaats,
+geslacht,
+telefoon,
+geboortedatum,
+schoolgeld,
+betaald)
+VALUES (
+ 6666,
+ 'Angelique',
+ 'A',
+ 'de',
+ 'Hoed',
+ 'Hoedenstraat 12',
+ '1663LW',
+ 'Lelystad',
+ 'V',
+ '0320654378',
+ '1998-06-06',
+ '200',
+ '100');
+
+
+SELECT woonplaats, geslacht, (schoolgeld - betaald)
+FROM student
+WHERE NOT (schoolgeld - betaald) = 0;
